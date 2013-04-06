@@ -1,0 +1,27 @@
+To install the software:
+
+$ sudo apt-get install vim             # or your choice of editor
+$ sudo apt-get install git             # for github
+$ sudo apt-get install ruby1.9.3       # also installs gem, rake, etc.
+$ sudo apt-get install nodejs          # runtime for JavaScript
+
+$ sudo gem install rails -v 3.2.3
+
+$ sudo apt-get install libxslt-dev     # libraries for rails
+$ sudo apt-get install libxm12-dev     # libraries for rails
+$ sudo apt-get install libsqlite3-dev  # libraries for rails
+
+To create a basic rails app
+
+$ mkdir rails_projects && cd rails_projects
+$ rails new first_app
+$ cd first_app
+$ vim Gemfile  # edit to add the right versions of gems you need
+$ bundle install
+$ rails server # starts server
+
+Go to a web browser, and use the URL:
+
+  http://localhost:3000
+
+You should see a default web app!
