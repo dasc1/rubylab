@@ -1,0 +1,58 @@
+A useful workflow for Git and Rails.
+
+SETTING UP LOCAL GIT, GITHUB
+
+ - First, set up your Rails project as normal.
+ - On the Github website, log in, and create a new repo for your project
+   without a README (you will use the one provided by Rails).
+ - On the command line, check out the repo with:
+   $ git clone https://github.com/<username>/<reponame>
+ - The repo will be empty, and you will get a warning.  Ignore it.
+ - Move the contents of the Rails base directory to the cloned repo
+   directory.
+ - Edit the .gitignore file to ignore files like *~, *.swp, doc/ and
+   .project.
+ - Add the files with "$ git add .", then "git commit" with a message
+   "Initial Check-in".
+ - To push the changes to Github, type the following:
+   $ git push -u origin master
+ - For future pushes, you only need to type:
+   $ git push
+ - Now, if you ever want to revert to the last (local) checkout, type:
+   "$ git checkout -f".
+
+BRANCH
+
+ - When experimenting, you might want to create a branch, edit the
+   branch, commit it, then merge it into the master.  This is a very
+   common, and powerful workflow.
+ - To create a new branch, from the base directory, type:
+   $ git checkout -b <newbranch>
+ - To see a list of branches (current branch is starred):
+   $ git branch
+
+EDIT
+
+ - Edit any of the files in the branch as you see fit.
+ - To move a file, type:
+   $ git mv <oldfilename> <newfilename>
+
+COMMIT
+
+ - You need to add the files that you changed with "$ git add <fname>".
+ - To commit ALL modified files (but not tracking any new ones), type:
+   $ git commit -a
+
+MERGE
+
+ - When you are satisfied with the branch, and it is committed, switch
+   back to the master branch with:
+   $ git checkout master
+ - To bring in your changes from the branch, merge them with:
+   $ git merge <newbranch>
+ - If you are finished with the (merged) branch, delete it with:
+   $ git branch -d <newbranch>
+ - If you want to get rid of a branch that hasn't been merged, try:
+   $ git branch -D <badbranch>
+ - To push the merge to the remote, if you have pushed before, try:
+   $ git push
