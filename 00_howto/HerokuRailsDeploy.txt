@@ -1,0 +1,9 @@
+How to Deploy a Rails App on Heroku
+
+1) Set up an account on Heroku.
+2) Create your Rails project, and version it with Git.
+3) $ sudo gem install heroku   (or install the toolbelt!)
+4) $ heroku keys:add   (to create a SSH key for your computer)
+5) $ heroku create   (creates a new app in your account)
+6) $ git push heroku master  (from the Rails directory)
+7) $ heroku open   (brings up the app in a browser - optional)
